@@ -144,6 +144,8 @@ Cloning into 'tasks/lab01'...
 
 ```
 
+**Полный вывод команды:** [git_clone.log](git_clone.log)
+
 **Команда:**
 ```bash
 mkdir reports/lab${LAB_NUMBER}
@@ -184,6 +186,8 @@ boost_1_69_0.tar.gz 100%[===================>] 106.53M   624KB/s    in 2m55s
 
 2026-06-07 14:01:59 (624 KB/s) - 'boost_1_69_0.tar.gz' saved [111710205/111710205]
 ```
+
+**Полный вывод команды:** [wget.log](wget.log)
 
 ---
 
@@ -314,7 +318,7 @@ common.copy stage/lib/libboost_wave.a
 [exit code: 0]
 ```
 
-**Полный лог компиляции:** [compilation.log](compilation.log)
+**Полный вывод команды сборки:** [compilation.log](compilation.log)
 
 ---
 
@@ -378,8 +382,8 @@ du -sh /Users/igorivanov/boost-libs
 
 **Команда:**
 ```bash
-git add REPORT.md any_list.txt asio_list.txt compilation.log lib_sizes.txt top10.txt
-git commit -m "Match lab01 example layout"
+git add REPORT.md any_list.txt asio_list.txt compilation.log lib_sizes.txt top10.txt git_clone.log wget.log
+git commit -m "Add full command logs"
 git push origin main
 ```
 
