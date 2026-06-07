@@ -142,10 +142,7 @@ $ cd /Users/igorivanov/Documents/lab01/n9s6sstd5h-blip/workspace
 $ git clone https://github.com/tp-labs/lab01 tasks/lab01
 Cloning into 'tasks/lab01'...
 
-[exit code: 0]
 ```
-
-**Полный вывод:** [git_clone.log](git_clone.log)
 
 **Команда:**
 ```bash
@@ -169,8 +166,24 @@ pwd
 ```bash
 wget -O boost_1_69_0.tar.gz https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
 ```
+**Вывод:**
+```text
+--2026-06-07 13:59:03--  https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
+Resolving sourceforge.net (sourceforge.net)... 104.18.13.149, 104.18.12.149
+Connecting to sourceforge.net (sourceforge.net)|104.18.13.149|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz/ [following]
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz/download [following]
+HTTP request sent, awaiting response... 302 Found
+Location: https://downloads.sourceforge.net/project/boost/boost/1.69.0/boost_1_69_0.tar.gz [following]
+Length: 111710205 (107M) [application/x-gzip]
+Saving to: 'boost_1_69_0.tar.gz'
 
-**Полный вывод:** [wget.log](wget.log)
+boost_1_69_0.tar.gz 100%[===================>] 106.53M   624KB/s    in 2m55s
+
+2026-06-07 14:01:59 (624 KB/s) - 'boost_1_69_0.tar.gz' saved [111710205/111710205]
+```
 
 ---
 
@@ -275,8 +288,18 @@ grep -R "boost::asio" /Users/igorivanov/boost_1_69_0
 cd /Users/igorivanov/boost_1_69_0
 ./bootstrap.sh
 ```
+**Вывод:**
+```text
+Building Boost.Build engine with toolset darwin... tools/build/src/engine/bin.macosxarm/b2
+Unicode/ICU support for Boost.Regex?... not found.
+Generating Boost.Build configuration in project-config.jam...
 
-**Полный вывод:** [bootstrap.log](bootstrap.log)
+Bootstrapping is done. To build, run:
+
+    ./b2
+
+To adjust configuration, edit 'project-config.jam'.
+```
 
 **Команда:**
 ```bash
@@ -355,8 +378,8 @@ du -sh /Users/igorivanov/boost-libs
 
 **Команда:**
 ```bash
-git add REPORT.md any_list.txt asio_list.txt compilation.log lib_sizes.txt top10.txt git_clone.log wget.log bootstrap.log README.md .gitignore
-git commit -m "Reformat lab01 report"
+git add REPORT.md any_list.txt asio_list.txt compilation.log lib_sizes.txt top10.txt
+git commit -m "Match lab01 example layout"
 git push origin main
 ```
 
