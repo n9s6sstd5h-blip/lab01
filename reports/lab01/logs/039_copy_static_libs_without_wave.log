@@ -1,0 +1,4 @@
+$ cd /Users/igorivanov
+$ mkdir -p boost-libs && find boost_1_69_0/stage/lib -type f -name '*.a' -exec cp {} boost-libs/ \;
+
+[exit code: 0]

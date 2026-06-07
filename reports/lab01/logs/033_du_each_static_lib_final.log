@@ -1,0 +1,33 @@
+$ cd /Users/igorivanov
+$ du -h boost-libs/* | sort -h
+4.0K	boost-libs/libboost_atomic.a
+4.0K	boost-libs/libboost_exception.a
+4.0K	boost-libs/libboost_stacktrace_noop.a
+4.0K	boost-libs/libboost_system.a
+ 12K	boost-libs/libboost_stacktrace_basic.a
+ 16K	boost-libs/libboost_context.a
+ 16K	boost-libs/libboost_stacktrace_addr2line.a
+ 20K	boost-libs/libboost_timer.a
+ 36K	boost-libs/libboost_random.a
+ 48K	boost-libs/libboost_date_time.a
+ 84K	boost-libs/libboost_prg_exec_monitor.a
+104K	boost-libs/libboost_chrono.a
+112K	boost-libs/libboost_container.a
+148K	boost-libs/libboost_math_c99.a
+148K	boost-libs/libboost_math_c99f.a
+148K	boost-libs/libboost_math_c99l.a
+152K	boost-libs/libboost_filesystem.a
+160K	boost-libs/libboost_fiber.a
+204K	boost-libs/libboost_iostreams.a
+460K	boost-libs/libboost_wserialization.a
+684K	boost-libs/libboost_serialization.a
+744K	boost-libs/libboost_graph.a
+852K	boost-libs/libboost_program_options.a
+1.1M	boost-libs/libboost_regex.a
+1.4M	boost-libs/libboost_math_tr1.a
+1.4M	boost-libs/libboost_math_tr1l.a
+1.4M	boost-libs/libboost_test_exec_monitor.a
+1.4M	boost-libs/libboost_unit_test_framework.a
+1.5M	boost-libs/libboost_math_tr1f.a
+
+[exit code: 0]

@@ -1,0 +1,47 @@
+002_export_github_username	/Users/igorivanov/Documents/lab01	export GITHUB_USERNAME=n9s6sstd5h-blip; printf '%s\n' "${GITHUB_USERNAME}"
+003_export_lab_number	/Users/igorivanov/Documents/lab01	export LAB_NUMBER=01; printf '%s\n' "${LAB_NUMBER}"
+004_pwd_workspace	/Users/igorivanov/Documents/lab01/n9s6sstd5h-blip/workspace	pwd
+005_pwd_user_dir	/Users/igorivanov/Documents/lab01/n9s6sstd5h-blip	pwd
+006_clone_assignment	/Users/igorivanov/Documents/lab01/n9s6sstd5h-blip/workspace	git clone https://github.com/tp-labs/lab01 tasks/lab01
+007_copy_assignment_readme	/Users/igorivanov/Documents/lab01/n9s6sstd5h-blip/workspace	mkdir -p reports/lab01 && cp tasks/lab01/README.md reports/lab01/REPORT.md
+008_wget_boost	/Users/igorivanov/Documents/lab01/n9s6sstd5h-blip/workspace	wget -O boost_1_69_0.tar.gz https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
+009_remove_old_boost	/Users/igorivanov	rm -rf boost_1_69_0 boost-libs
+010_extract_boost	/Users/igorivanov	tar -xzf /Users/igorivanov/Documents/lab01/n9s6sstd5h-blip/workspace/boost_1_69_0.tar.gz
+011_count_top_level_files	/Users/igorivanov	find boost_1_69_0 -maxdepth 1 -type f | wc -l
+012_count_all_files	/Users/igorivanov	find boost_1_69_0 -type f | wc -l
+013_count_file_types	/Users/igorivanov	printf 'headers '; find boost_1_69_0 -type f \( -name '*.h' -o -name '*.hpp' -o -name '*.ipp' \) | wc -l; printf 'cpp '; find boost_1_69_0 -type f -name '*.cpp' | wc -l; printf 'other '; find boost_1_69_0 -type f ! \( -name '*.h' -o -name '*.hpp' -o -name '*.ipp' -o -name '*.cpp' \) | wc -l
+014_find_any_hpp	/Users/igorivanov	find "$(pwd)/boost_1_69_0" -name any.hpp
+015_find_boost_asio_refs	/Users/igorivanov	grep -R -l 'boost::asio' boost_1_69_0
+016_bootstrap_boost	/Users/igorivanov/boost_1_69_0	./bootstrap.sh
+017_build_boost_clean	/Users/igorivanov/boost_1_69_0	./b2 link=static variant=release threading=multi -j4 stage
+018_copy_static_libs	/Users/igorivanov	mkdir -p boost-libs && find boost_1_69_0/stage/lib -type f -name '*.a' -exec cp {} boost-libs/ \;
+019_du_each_static_lib	/Users/igorivanov	du -h boost-libs/* | sort -h
+020_top10_static_libs	/Users/igorivanov	du -h boost-libs/* | sort -hr | head -10
+021_remove_failed_boost_tree	/Users/igorivanov	rm -rf boost_1_69_0 boost-libs
+022_extract_boost_clean_retry	/Users/igorivanov	tar -xzf /Users/igorivanov/Documents/lab01/n9s6sstd5h-blip/workspace/boost_1_69_0.tar.gz
+023_bootstrap_boost_clean_retry	/Users/igorivanov/boost_1_69_0	./bootstrap.sh
+024_build_boost_clang_clean	/Users/igorivanov/boost_1_69_0	./b2 toolset=clang link=static variant=release threading=multi -j4 stage
+025_copy_static_libs_after_success	/Users/igorivanov	mkdir -p boost-libs && find boost_1_69_0/stage/lib -type f -name '*.a' -exec cp {} boost-libs/ \;
+026_du_each_static_lib_after_success	/Users/igorivanov	du -h boost-libs/* | sort -h
+027_top10_static_libs_after_success	/Users/igorivanov	du -h boost-libs/* | sort -hr | head -10
+028_remove_second_failed_boost_tree	/Users/igorivanov	rm -rf boost_1_69_0 boost-libs
+029_extract_boost_clean_final	/Users/igorivanov	tar -xzf /Users/igorivanov/Documents/lab01/n9s6sstd5h-blip/workspace/boost_1_69_0.tar.gz
+030_bootstrap_boost_clean_final	/Users/igorivanov/boost_1_69_0	./bootstrap.sh
+031_build_boost_clang_warning_flag_clean	/Users/igorivanov/boost_1_69_0	./b2 toolset=clang cxxflags='-Wno-enum-constexpr-conversion' link=static variant=release threading=multi -j4 stage
+032_copy_static_libs_final	/Users/igorivanov	mkdir -p boost-libs && find boost_1_69_0/stage/lib -type f -name '*.a' -exec cp {} boost-libs/ \;
+033_du_each_static_lib_final	/Users/igorivanov	du -h boost-libs/* | sort -h
+034_top10_static_libs_final	/Users/igorivanov	du -h boost-libs/* | sort -hr | head -10
+035_remove_third_failed_boost_tree	/Users/igorivanov	rm -rf boost_1_69_0 boost-libs
+036_extract_boost_clean_without_wave	/Users/igorivanov	tar -xzf /Users/igorivanov/Documents/lab01/n9s6sstd5h-blip/workspace/boost_1_69_0.tar.gz
+037_bootstrap_boost_without_wave	/Users/igorivanov/boost_1_69_0	./bootstrap.sh
+038_build_boost_without_wave_clean	/Users/igorivanov/boost_1_69_0	./b2 toolset=clang --without-wave link=static variant=release threading=multi -j4 stage
+039_copy_static_libs_without_wave	/Users/igorivanov	mkdir -p boost-libs && find boost_1_69_0/stage/lib -type f -name '*.a' -exec cp {} boost-libs/ \;
+040_du_each_static_lib_without_wave	/Users/igorivanov	du -h boost-libs/* | sort -h
+041_top10_static_libs_without_wave	/Users/igorivanov	du -h boost-libs/* | sort -hr | head -10
+042_remove_boost_tree_for_cpp03	/Users/igorivanov	rm -rf boost_1_69_0 boost-libs
+043_extract_boost_clean_cpp03	/Users/igorivanov	tar -xzf /Users/igorivanov/Documents/lab01/n9s6sstd5h-blip/workspace/boost_1_69_0.tar.gz
+044_bootstrap_boost_cpp03	/Users/igorivanov/boost_1_69_0	./bootstrap.sh
+045_build_boost_cpp03_clean	/Users/igorivanov/boost_1_69_0	./b2 toolset=clang cxxflags='-std=c++03' link=static variant=release threading=multi -j4 stage
+046_copy_static_libs_cpp03	/Users/igorivanov	mkdir -p boost-libs && find boost_1_69_0/stage/lib -type f -name '*.a' -exec cp {} boost-libs/ \;
+047_du_each_static_lib_cpp03	/Users/igorivanov	du -h boost-libs/* | sort -h
+048_top10_static_libs_cpp03	/Users/igorivanov	du -h boost-libs/* | sort -hr | head -10

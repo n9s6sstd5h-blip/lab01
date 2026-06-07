@@ -1,0 +1,4 @@
+$ cd /Users/igorivanov
+$ rm -rf boost_1_69_0 boost-libs
+
+[exit code: 0]

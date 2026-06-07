@@ -1,0 +1,5 @@
+$ cd /Users/igorivanov/Documents/lab01
+$ export GITHUB_USERNAME=n9s6sstd5h-blip; printf '%s\n' "${GITHUB_USERNAME}"
+n9s6sstd5h-blip
+
+[exit code: 0]
