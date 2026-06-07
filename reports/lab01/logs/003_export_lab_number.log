@@ -1,5 +1,0 @@
-$ cd /Users/igorivanov/Documents/lab01
-$ export LAB_NUMBER=01; printf '%s\n' "${LAB_NUMBER}"
-01
-
-[exit code: 0]

@@ -1,0 +1,10 @@
+2.9M	/Users/igorivanov/boost-libs/libboost_wave.a
+2.5M	/Users/igorivanov/boost-libs/libboost_log.a
+2.2M	/Users/igorivanov/boost-libs/libboost_log_setup.a
+1.5M	/Users/igorivanov/boost-libs/libboost_math_tr1f.a
+1.4M	/Users/igorivanov/boost-libs/libboost_unit_test_framework.a
+1.4M	/Users/igorivanov/boost-libs/libboost_test_exec_monitor.a
+1.4M	/Users/igorivanov/boost-libs/libboost_math_tr1l.a
+1.4M	/Users/igorivanov/boost-libs/libboost_math_tr1.a
+1.1M	/Users/igorivanov/boost-libs/libboost_regex.a
+1.1M	/Users/igorivanov/boost-libs/libboost_locale.a

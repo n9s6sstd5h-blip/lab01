@@ -1,5 +1,0 @@
-$ cd /Users/igorivanov
-$ du -h boost-libs/* | sort -hr | head -10
-(eval):1: no matches found: boost-libs/*
-
-[exit code: 0]

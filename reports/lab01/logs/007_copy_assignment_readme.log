@@ -1,4 +1,0 @@
-$ cd /Users/igorivanov/Documents/lab01/n9s6sstd5h-blip/workspace
-$ mkdir -p reports/lab01 && cp tasks/lab01/README.md reports/lab01/REPORT.md
-
-[exit code: 0]

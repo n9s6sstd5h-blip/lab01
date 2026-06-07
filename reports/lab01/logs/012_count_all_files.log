@@ -1,5 +1,0 @@
-$ cd /Users/igorivanov
-$ find boost_1_69_0 -type f | wc -l
-   61191
-
-[exit code: 0]

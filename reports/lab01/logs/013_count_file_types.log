@@ -1,7 +1,0 @@
-$ cd /Users/igorivanov
-$ printf 'headers '; find boost_1_69_0 -type f \( -name '*.h' -o -name '*.hpp' -o -name '*.ipp' \) | wc -l; printf 'cpp '; find boost_1_69_0 -type f -name '*.cpp' | wc -l; printf 'other '; find boost_1_69_0 -type f ! \( -name '*.h' -o -name '*.hpp' -o -name '*.ipp' -o -name '*.cpp' \) | wc -l
-headers    15803
-cpp    13774
-other    31614
-
-[exit code: 0]
